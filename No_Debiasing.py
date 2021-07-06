@@ -19,7 +19,7 @@ np.random.seed(0)
 Dataset_name = "Heart"  # "Heart", "Diabetes", "Credit", "CAMH"
 
 if Dataset_name == "Heart":
-    df = pd.read_csv("heart_failure_pre.csv")
+    df = pd.read_csv("Datasets/Heart_failure_pre.csv")
     numerical_features = ['age', 'time', 'ejection_fraction', 'platelets',
                           'serum_creatinine', 'serum_sodium']
     # fairness mapping
@@ -29,7 +29,7 @@ if Dataset_name == "Heart":
     pos_label = 1  # dead
 
 if Dataset_name == "Diabetes":
-    df = pd.read_csv("diabetes_resample_SMOTE.csv")
+    df = pd.read_csv("Datasets/Diabetes_pre.csv")
     numerical_features = ['time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications',
                           'number_outpatient',
                           'number_emergency', 'number_inpatient', 'number_diagnoses', 'age', 'diag_1', 'diag_2',
@@ -49,7 +49,7 @@ if Dataset_name == "Diabetes":
     pos_label = 1  # readmitted
 
 if Dataset_name == "Credit":
-    df = pd.read_csv("credit_pre.csv")
+    df = pd.read_csv("Datasets/Credit_pre.csv")
     numerical_features = ['month', 'credit_amount', 'investment_as_income_percentage', 'residence_since',
                           'number_of_credits', 'people_liable_for']
     # fairness mapping
@@ -59,7 +59,7 @@ if Dataset_name == "Credit":
     pos_label = 1  # good credit
 
 if Dataset_name == "CAMH":
-    df = pd.read_csv("CAMH_pre.csv")
+    df = pd.read_csv("Datasets/CAMH_pre.csv")
 
     numerical_features = ['Wave', 'Region', 'Age', 'Gender', 'Q4_1', 'Q4_2', 'Q4_3', 'Q4_4',
                           'Q4_5', 'Q4_6', 'Q4_99', 'Q5', 'Q6 ', 'Q7', 'Q15 ', 'Q18', 'Q20x1 ',
